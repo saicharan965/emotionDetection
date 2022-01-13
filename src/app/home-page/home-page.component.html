@@ -1,0 +1,19 @@
+<mat-toolbar class="tolBarColor">
+    <span class="spacer">Sentiment Analysis</span>
+
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let one of menuIcons">
+            <mat-icon>{{one.iconName}}</mat-icon>
+            <span>{{one.iconDesc}}</span>
+        </button>
+    </mat-menu>
+
+</mat-toolbar>
+
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,85 @@
+<div class="rowOne row text-center ">
+    <div class="row form-control">
+
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>Enter a phrase</mat-label>
+                <input matInput placeholder="Customer Voice Output" #input>
+                <mat-icon matSuffix></mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <button mat-raised-button color="accent" (click)="onGetData(input.value)">Submit</button>
+        </p>
+
+    </div>
+    <div class="col-5 leftDiv">
+
+        <mat-card class="leftCard">
+            <mat-card-title>Customer and Agent Conversation : </mat-card-title>
+            <mat-card-content>Agent-customer Conversation</mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card class="insideCard">
+
+            </mat-card>
+        </mat-card>
+
+    </div>
+    <div class="col-2 text-center">
+
+
+        <mat-card class="middleCard">
+            <mat-card-content>
+                <div class="row center text-center">
+                    <button mat-raised-button color="warn" class="recordBtn">Record</button>
+                </div>
+
+                <div class="row innerDiv">
+                    <mat-icon>sentiment_very_satisfied</mat-icon>
+                    <h2 class="toppie">Happy: {{emotionStorage.Happy}}</h2>
+                    <mat-divider></mat-divider>
+                </div>
+                <div class="row innerDiv">
+                    <mat-icon>sentiment_very_dissatisfied</mat-icon>
+                    <h2 class="toppie"> Fear: {{emotionStorage.Fear}}</h2>
+                    <mat-divider></mat-divider>
+                </div>
+                <div class="row innerDiv">
+                    <mat-icon>sentiment_neutral</mat-icon>
+                    <h2 class="toppie"> Sad: {{emotionStorage.Sad}}</h2>
+                    <mat-divider></mat-divider>
+                </div>
+
+                <div class="row innerDiv">
+                    <mat-icon>sentiment_neutral</mat-icon>
+                    <h2 class="toppie">Angry :{{emotionStorage.Angry}}</h2>
+                    <mat-divider></mat-divider>
+                </div>
+
+                <div class="row innerDiv">
+                    <mat-icon>sentiment_neutral</mat-icon>
+                    <h2 class="toppie">Surprise :{{emotionStorage.Surprise}}</h2>
+                    <mat-divider></mat-divider>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-5 rightDiv ">
+
+
+        <mat-card class="leftCard">
+            <mat-card-title>Customer Response : </mat-card-title>
+            <mat-card-content>Customer responses</mat-card-content>
+            <mat-divider></mat-divider>
+            <!-- <mat-card-content>This is customer convo</mat-card-content> -->
+            <mat-card class="insideCard">
+
+            </mat-card>
+            <mat-card-footer>
+                <!-- <button mat-raised-button color="accent" (click)="onAnalyze(input.value)">Analyze</button> -->
+            </mat-card-footer>
+        </mat-card>
+
+
+    </div>
+</div>
